@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* NOTEBOOKLM · MAISON NOIRE — VIVID LUXURY */
+:root{--bg:#070709;--iv:#F0EBE1}
+*{box-sizing:border-box}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(212,175,97,.3);border-radius:99px}
+::-webkit-scrollbar-thumb:hover{background:rgba(212,175,97,.5)}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--iv);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;letter-spacing:-.015em}
+::selection{background:rgba(212,175,97,.35);color:#fff}
+button{user-select:none;cursor:pointer}textarea{field-sizing:content}
+.p1k{perspective:1200px}
+
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes gl{0%,100%{opacity:.3}50%{opacity:.65}}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+@keyframes si{from{opacity:0;transform:scale(.93) translateY(6px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes mp{0%,100%{border-radius:60% 40% 30% 70%/60% 30% 70% 40%}50%{border-radius:30% 60% 70% 40%/50% 60% 30% 60%}}
+@keyframes td{0%,80%,100%{transform:scale(.45);opacity:.25}40%{transform:scale(1);opacity:1}}
+@keyframes wb{0%,100%{height:2px}50%{height:16px}}
+@keyframes gn{0%{transform:translate(0)}50%{transform:translate(2%,-3%)}100%{transform:translate(0)}}
+@keyframes ts{0%{left:-50%;opacity:0}15%{opacity:1}85%{opacity:1}100%{left:150%;opacity:0}}
+@keyframes pb{0%,100%{box-shadow:0 0 0 0 rgba(212,175,97,.25)}50%{box-shadow:0 0 0 10px rgba(212,175,97,0)}}
+
+.aFl{animation:fl 8s ease-in-out infinite}.aGl{animation:gl 5s ease-in-out infinite}
+.aUp{animation:up .7s cubic-bezier(.16,1,.3,1) both}.aFi{animation:fi .4s ease both}
+.aSi{animation:si .5s cubic-bezier(.16,1,.3,1) both}.aMp{animation:mp 14s ease-in-out infinite}
+.aPb{animation:pb 3s ease infinite}
+.td1{animation:td 1.5s ease-in-out infinite}.td2{animation:td 1.5s ease-in-out .18s infinite}.td3{animation:td 1.5s ease-in-out .36s infinite}
+
+/* gradient text — bright gold */
+.gG{background:linear-gradient(135deg,#D4AF61 0%,#F0DFB0 45%,#D4AF61 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gP{background:linear-gradient(135deg,#B4B8C8,#D8DBE5);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* glass — richer */
+.glass{background:rgba(14,14,22,.75);backdrop-filter:blur(60px) saturate(1.6);-webkit-backdrop-filter:blur(60px) saturate(1.6)}
+
+/* raised surface — strong depth */
+.sR{box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 0 0 1px rgba(255,255,255,.04),0 4px 16px rgba(0,0,0,.6)}
+
+/* border — clearly visible */
+.sB{border:1px solid rgba(255,255,255,.1)}
+
+/* gradient border — vivid gold trim */
+.gb{position:relative;border-radius:20px}
+.gb::before{content:'';position:absolute;inset:0;z-index:0;border-radius:inherit;padding:1px;background:linear-gradient(150deg,rgba(212,175,97,.3),rgba(180,184,200,.12),rgba(201,139,144,.15),transparent 45%,rgba(212,175,97,.22));mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;-webkit-mask-composite:xor;pointer-events:none;transition:all .5s}
+.gb:hover::before{background:linear-gradient(150deg,rgba(212,175,97,.5),rgba(180,184,200,.22),rgba(201,139,144,.25),transparent 45%,rgba(212,175,97,.35))}
+
+/* small gradient border */
+.gbs{position:relative;border-radius:14px}
+.gbs::before{content:'';position:absolute;inset:0;z-index:0;border-radius:inherit;padding:1px;background:linear-gradient(150deg,rgba(212,175,97,.18),rgba(180,184,200,.08),transparent 60%,rgba(212,175,97,.12));mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;-webkit-mask-composite:xor;pointer-events:none;transition:all .4s}
+.gbs:hover::before{background:linear-gradient(150deg,rgba(212,175,97,.35),rgba(180,184,200,.15),transparent 60%,rgba(212,175,97,.25))}
+
+/* noise — visible grain */
+.noise::before{content:'';position:fixed;inset:-50%;width:200%;height:200%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.025;pointer-events:none;z-index:9999;animation:gn 4s steps(4) infinite}
+
+/* shine sweep — bright */
+.shine{position:relative;overflow:hidden}.shine::after{content:'';position:absolute;top:0;left:-50%;width:35%;height:1px;background:linear-gradient(90deg,transparent,rgba(212,175,97,.3),transparent);animation:ts 8s ease-in-out infinite}
+
+/* mesh bg — richer color wash */
+.meshBg{background:radial-gradient(ellipse at 10% 0%,rgba(212,175,97,.1) 0%,transparent 45%),radial-gradient(ellipse at 90% 100%,rgba(180,184,200,.07) 0%,transparent 45%),radial-gradient(ellipse at 45% 35%,rgba(201,139,144,.04) 0%,transparent 50%),var(--bg)}
+
+/* hero bg */
+.heroBg{background:url('/images/hero-bg.jpg') center/cover no-repeat;position:relative}
+.heroBg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,9,.05) 0%,rgba(7,7,9,.5) 28%,rgba(7,7,9,.88) 58%,rgba(7,7,9,1) 100%)}
+
+/* gold divider — bright */
+.goldLine{height:1px;background:linear-gradient(90deg,transparent,rgba(212,175,97,.28),transparent)}
+
+/* line clamp */
+.lc1{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.lc2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* focus ring — rich gold */
+input:focus,textarea:focus{box-shadow:0 0 0 1.5px rgba(212,175,97,.25),0 0 28px rgba(212,175,97,.08)}
